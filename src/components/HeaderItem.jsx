@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const HeaderItem = () => {
+const HeaderItem = ({ name, Icon }) => {
   return (
-    <div>HeaderItem</div>
-  )
-}
+    <div className="text-white flex items-center gap-3 text-[18px] font-semibold cursor-pointer">
+      <Icon />
+      <h2>{name}</h2>
+    </div>
+  );
+};
 
-export default HeaderItem
+export default HeaderItem;
