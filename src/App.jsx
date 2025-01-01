@@ -5,5 +5,5 @@ export default function App() {
     <div className="">
       <Header />
     </div>
-  )
+  );
 }
