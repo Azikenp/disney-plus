@@ -39,15 +39,23 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex">
+    <div className="flex items-center justify-between p-5">
+      <div className="flex gap-8 items-center">
+        <img
+          src={logo}
+          className="w-[80px] md:w-[115px] object-cover"
+          alt="logo"
+        />
+        {menu.map((item) => (
+          <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+        ))}
+      </div>
+
       <img
-        src={logo}
-        className="w-[80px] md:w-[115px] object-cover"
-        alt="logo"
+        src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+        alt="avatar"
+        className="w-[40px] rounded-full"
       />
-      {menu.map((item) => (
-        <HeaderItem name={item.name} Icon={item.icon} />
-      ))}
     </div>
   );
 };
