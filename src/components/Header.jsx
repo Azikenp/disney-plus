@@ -15,7 +15,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const menu = [
     {
-      name: "HOME",
+      name: "HOMES",
       icon: HiHome,
     },
     {
