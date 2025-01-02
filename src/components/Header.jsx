@@ -46,9 +46,16 @@ const Header = () => {
           className="w-[80px] md:w-[115px] object-cover"
           alt="logo"
         />
-        {menu.map((item) => (
-          <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
-        ))}
+        <div className="hidden md:flex gap-8">
+          {menu.map((item) => (
+            <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+          ))}
+        </div>
+        <div className="flex gap-8">
+          {menu.map((item) => (
+            <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+          ))}
+        </div>
       </div>
 
       <img
