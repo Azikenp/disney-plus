@@ -51,10 +51,16 @@ const Header = () => {
             <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
           ))}
         </div>
-        <div className="flex gap-8">
-          {menu.map((item) => (
-            <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
-          ))}
+        <div className="flex md:hidden gap-8">
+          {menu.map(
+            (item, index) =>
+              index < 3 && (
+                <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+              )
+          )}
+          <div className="md:hidden gap-8">
+            <HeaderItem name={""} Icon={HiDotsVertical} />
+          </div>
         </div>
       </div>
 
