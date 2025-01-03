@@ -9,7 +9,7 @@ import {
 import { HiPlus, HiDotsVertical } from "react-icons/hi";
 import logo from "../assets/Images/logo.png";
 import HeaderItem from "./HeaderItem";
-import { useStates } from "react";
+import { useState } from "react";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
