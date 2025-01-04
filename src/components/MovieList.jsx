@@ -19,7 +19,7 @@ const MovieList = ({ genreId }) => {
   return (
     <div>
       {MovieList.map((item, index) => (
-        <MovieCard />
+        <MovieCard movie={item} key={index} />
       ))}
     </div>
   );
