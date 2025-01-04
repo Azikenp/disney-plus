@@ -17,7 +17,7 @@ const MovieList = ({ genreId }) => {
   };
 
   return (
-    <div>
+    <div className="flex overflow-x-auto scrollbar-hide gap-2">
       {MovieList.map((item, index) => (
         <MovieCard movie={item} key={index} />
       ))}
