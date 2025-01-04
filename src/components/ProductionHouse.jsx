@@ -44,7 +44,7 @@ function ProductionHouse() {
       {productionHouseList.map((item) => (
         <div
           key={item.id}
-          className="relative border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
+          className="relative border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer shadow-xl shadow-black"
         >
           <img src={item.image} className="w-full z-[1]" />
           <video
