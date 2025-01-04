@@ -15,7 +15,7 @@ const Slider = () => {
 
   const getTrendingMovies = () => {
     GlobalApi.getTrendingVideos.then((res) => {
-      console.log(res.data.results);
+      // console.log(res.data.results);
       setMovieList(res.data.results);
     });
   };

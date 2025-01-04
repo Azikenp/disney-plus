@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import './app.css'
 import Slider from "./components/Slider";
 import ProductionHouse from "./components/ProductionHouse";
+import GenreMovieList from "./components/GenreMovieList";
 
 export default function App() {
   return (
@@ -11,6 +12,8 @@ export default function App() {
       <Slider />
 
       <ProductionHouse />
+
+      <GenreMovieList />
     </div>
   );
 }
