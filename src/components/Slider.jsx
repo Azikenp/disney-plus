@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import GlobalApi from "../services/GlobalApi";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { FaImdb } from "react-icons/fa";
 
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
 const screenWidth = window.innerWidth;
@@ -44,7 +45,7 @@ const Slider = () => {
       >
         {movieList.map((item, index) => (
           <section
-            className="relative min-w-full md:h-[310px] mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-100 ease-in"
+            className="relative min-w-full md:h-[310px] mr-5 rounded-md hover:border-[2px] md:hover:border-[4px] border-gray-400 transition-all duration-100 ease-in"
             key={index}
           >
             <img
@@ -55,6 +56,16 @@ const Slider = () => {
               <h3 className="text-white text-[14px] md:text-[30px]">
                 {item.name ? item.name : item.title}
               </h3>
+
+              <div className="flex items-center gap-2 mt-2">
+                <FaImdb className="text-[22px] md:text-[30px] bg-yellow-400 text-black" />
+                <p className="text-white text-[8px] md:text-[16px]">{item.vote_average}</p>
+              </div>
+
+              <p className="text-[10px] md:text-[16px] mt-2 text-white font-light md:font-normal">
+                {item.release_date ? item.release_date : item.first_air_date}
+              </p>
+
               <button className="mt-3 md:mt-5 text-[10px] md:text-[16px] bg-red-900 text-white hover:bg-transparent hover:border-gray-400">
                 Watch Now
               </button>
