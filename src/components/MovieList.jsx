@@ -26,7 +26,7 @@ const MovieList = ({ genreId }) => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <IoChevronBackOutline
         onClick={() => slideLeft(elementRef.current)}
         className={`text-[50px] text-white
@@ -36,7 +36,7 @@ const MovieList = ({ genreId }) => {
 
       <div
         ref={elementRef}
-        className="flex overflow-x-auto scrollbar-hide gap-4 md:gap-8 pt-5 px-3 pb-5"
+        className="flex overflow-x-auto scrollbar-hide scroll-smooth gap-4 md:gap-8 pt-5 px-3 pb-5"
       >
         {MovieList.map((item, index) => (
           <MovieCard movie={item} key={index} />
@@ -45,9 +45,8 @@ const MovieList = ({ genreId }) => {
 
       <IoChevronForwardOutline
         onClick={() => slideRight(elementRef.current)}
-        className={`text-[50px] text-white
-          p-2 z-10 cursor-pointer 
-           hidden md:block absolute mt-[150px]`}
+        className={`text-[50px] text-white p-2 z-10 cursor-pointer 
+           hidden md:block absolute right-0 -mt-[200px]`}
       />
     </div>
   );
