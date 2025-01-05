@@ -45,7 +45,7 @@ const Slider = () => {
       >
         {movieList.map((item, index) => (
           <section
-            className="relative min-w-full md:h-[310px] mr-5 rounded-md hover:border-[2px] md:hover:border-[4px] border-gray-400 transition-all duration-100 ease-in"
+            className="relative min-w-full md:h-[390px] mr-5 rounded-md hover:border-[2px] md:hover:border-[4px] border-gray-400 transition-all duration-100 ease-in"
             key={index}
           >
             <img

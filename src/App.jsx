@@ -3,6 +3,7 @@ import './app.css'
 import Slider from "./components/Slider";
 import ProductionHouse from "./components/ProductionHouse";
 import GenreMovieList from "./components/GenreMovieList";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
       <ProductionHouse />
 
       <GenreMovieList />
+
+      <Footer />
     </div>
   );
 }
