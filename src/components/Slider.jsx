@@ -39,7 +39,7 @@ const Slider = () => {
         onClick={() => sliderRight(elementRef.current)}
       />
       <div
-        className="relative flex overflow-x-auto w-full px-16 py-4 scrollbar-hide scroll-smooth"
+        className="relative flex overflow-x-auto w-full px-4 md:px-16 py-4 scrollbar-hide scroll-smooth"
         ref={elementRef}
       >
         {movieList.map((item, index) => (
@@ -51,8 +51,13 @@ const Slider = () => {
               src={IMAGE_BASE_URL + item.backdrop_path}
               className="min-w-full h-full object-cover object-left-top rounded-md "
             />
-            <div className="absolute text-white text-[40px] left-4 top-20 w-[50%] font-extrabold">
-              <h3 className="">{item.name ? item.name : item.title}</h3>
+            <div className="absolute left-4 top-12 md:top-16 w-[50%] font-bold">
+              <h3 className="text-white text-[14px] md:text-[30px]">
+                {item.name ? item.name : item.title}
+              </h3>
+              <button className="mt-3 md:mt-5 text-[10px] md:text-[16px] bg-red-900 text-white hover:bg-transparent hover:border-gray-400">
+                Watch Now
+              </button>
             </div>
           </section>
         ))}
