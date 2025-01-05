@@ -32,7 +32,9 @@ const MovieList = ({ genreId, index_ }) => {
         onClick={() => slideLeft(elementRef.current)}
         className={`text-[50px] text-white
            p-2 z-10 cursor-pointer 
-            hidden md:block absolute mt-[150px]`}
+            hidden md:block absolute ${
+              index_ % 3 == 0 ? "mt-[80px]" : "mt-[150px]"
+            }`}
       />
 
       <div
@@ -53,7 +55,9 @@ const MovieList = ({ genreId, index_ }) => {
       <IoChevronForwardOutline
         onClick={() => slideRight(elementRef.current)}
         className={`text-[50px] text-white p-2 z-10 cursor-pointer 
-           hidden md:block absolute right-0 -mt-[200px]`}
+           hidden md:block absolute right-0 ${
+             index_ % 3 == 0 ? "-mt-[100px]" : "-mt-[200px]"
+           } `}
       />
     </div>
   );
