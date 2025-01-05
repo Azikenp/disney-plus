@@ -20,20 +20,20 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <div>
-      <div>
-        <p>
+    <div className="px-8 md:px-16 mt-4 pb-20">
+      <div className="flex gap-4 flex-col md:items-center">
+        <p className="text-white leading-7">
           Ready to watch? Enter your email to create or restart your membership.
         </p>
-        <input type="text" placeholder="Email Address" />
-        <button className="flex items-center">
-          Get Started <HiChevronRight />
+        <input type="text" placeholder="Email Address" className="bg-transparent border p-2 border-gray-500 rounded-md  placeholder:text-gray-400 placeholder:text-[12px] md:w-[70%]" />
+        <button className="flex items-center w-fit md:w-[13%] bg-red-600 hover:bg-red-500 border-none text-white">
+          Get Started <HiChevronRight className="text-[25px]" />
         </button>
       </div>
 
-      <div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-white mt-12">
         {footerLinks.map((link, index) => (
-          <p key={index}>{link}</p>
+          <p className="cursor-pointer hover:underline" key={index}>{link}</p>
         ))}
       </div>
     </div>
