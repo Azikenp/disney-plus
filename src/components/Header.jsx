@@ -45,7 +45,7 @@ const Header = () => {
       <div className="flex gap-8 items-center">
         <img
           src={logo}
-          className="w-[80px] md:w-[115px] object-cover"
+          className="w-[80px] md:w-[115px] object-cover cursor-pointer"
           alt="logo"
         />
         <div className="hidden md:flex gap-8">
