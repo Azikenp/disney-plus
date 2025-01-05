@@ -56,7 +56,7 @@ const MovieList = ({ genreId, index_ }) => {
         onClick={() => slideRight(elementRef.current)}
         className={`text-[50px] text-white p-2 z-10 cursor-pointer 
            hidden md:block absolute right-0 ${
-             index_ % 3 == 0 ? "-mt-[100px]" : "-mt-[200px]"
+             index_ % 3 == 0 ? "-mt-[120px]" : "-mt-[200px]"
            } `}
       />
     </div>
