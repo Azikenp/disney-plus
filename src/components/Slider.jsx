@@ -32,7 +32,7 @@ const Slider = () => {
   return (
     <div className="relative">
       <HiChevronLeft
-        className="hidden md:block cursor-pointer text-white text-[30px] absolute mx-8 mt-[150px]"
+        className="hidden md:block cursor-pointer text-white text-[30px] absolute mx-8 mt-[150px] z-10"
         onClick={() => sliderLeft(elementRef.current)}
       />
       <HiChevronRight
