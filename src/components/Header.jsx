@@ -41,8 +41,8 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between p-5">
-      <div className="flex gap-8 items-center">
+    <div className="flex items-center justify-between p-5 z-30">
+      <div className="flex gap-3 md:gap-8 items-center">
         <img
           src={logo}
           className="w-[80px] md:w-[115px] object-cover cursor-pointer"
@@ -63,7 +63,7 @@ const Header = () => {
           <div className="md:hidden" onClick={() => setToggle(!toggle)}>
             <HeaderItem name={""} Icon={HiDotsVertical} />
             {toggle && (
-              <div className="absolute  mt-3 bg-[#121212] border-[1px] border-gray-700 p-3 px-5 py-4">
+              <div className="absolute mt-4 bg-[#121212] border-[1px] border-gray-700 px-3 py-4  z-30">
                 {menu.map(
                   (item, index) =>
                     index > 2 && (
