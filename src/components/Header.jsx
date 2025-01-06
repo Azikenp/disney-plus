@@ -53,7 +53,7 @@ const Header = () => {
             <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
           ))}
         </div>
-        <div className="flex md:hidden gap-8">
+        <div className="flex md:hidden gap-3">
           {menu.map(
             (item, index) =>
               index < 3 && (
